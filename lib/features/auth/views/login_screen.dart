@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ideated_ecom/core/router/app_routes.dart';
 import 'package:ideated_ecom/features/auth/views/forgot_password_screen.dart';
 import 'package:ideated_ecom/features/auth/views/sign_up_screen.dart';
 import 'package:ideated_ecom/features/auth/widgets/custom_text_field.dart';
@@ -61,7 +62,10 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 24),
                 PrimaryButton(
                   text: 'Login',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, AppRoutes.getStart);
+
+                  },
                 ),
                 const SizedBox(height: 32),
                 const Row(
