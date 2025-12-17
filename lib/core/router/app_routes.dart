@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ideated_ecom/features/auth/views/get_start.dart';
 import 'package:ideated_ecom/features/auth/views/login_screen.dart';
+import 'package:ideated_ecom/features/home/screens/home_screen.dart';
 import 'package:ideated_ecom/features/onboarding/onboarding_screen.dart';
 import 'package:ideated_ecom/features/splash/splash_screen.dart';
 
@@ -9,6 +10,10 @@ class AppRoutes {
   static const onboarding = '/onboarding';
   static const login = '/login';
   static const getStart = '/getStart';
+  static const homeScreen = '/homeScreen';
+
+
+
 
 
   static Map<String, WidgetBuilder> routes = {
@@ -16,6 +21,7 @@ class AppRoutes {
     onboarding: (_) => const OnboardingScreen(),
     login: (_) => const LoginScreen(),
     getStart: (_) => const GetStart(),
+    homeScreen: (_) => const HomeScreen(),
 
 
   };

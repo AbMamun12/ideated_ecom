@@ -91,7 +91,7 @@ class GetStart extends StatelessWidget {
                   PrimaryButton(
                     text: 'Get Started',
                     onPressed: () {
-                      // Navigate to next screen
+                      Navigator.pushNamed(context, '/homeScreen');
                     },
                   ),
 
