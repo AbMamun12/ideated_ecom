@@ -57,7 +57,6 @@ class _HorizontalProductListState extends State<HorizontalProductList> {
       'rating': 4.2,
       'reviews': 145,
     },
-    // আরও প্রডাক্ট এড করতে পারেন
   ];
 
   void _scrollRight() {
@@ -98,7 +97,7 @@ class _HorizontalProductListState extends State<HorizontalProductList> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: SizedBox(
         height: 250,
         child: Stack(

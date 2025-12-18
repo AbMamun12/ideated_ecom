@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ideated_ecom/core/constant/asset_paths.dart';
 
 class HotSaleWidget extends StatelessWidget {
   const HotSaleWidget({super.key});
@@ -6,64 +7,89 @@ class HotSaleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            blurRadius: 4,
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: double.infinity,
-            height: 120,
-            decoration: BoxDecoration(
-              color: Colors.orange[100],
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(12),
-                topRight: Radius.circular(12),
-              ),
+          ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(12),
+              topRight: Radius.circular(12),
             ),
-            child: const Center(
-              child: Icon(Icons.local_offer, size: 60, color: Colors.orange),
+            child: Image.asset(AssetPaths.whatSummerSell,
+              width: double.infinity,
+              height: 180,
+              fit: BoxFit.cover,
             ),
           ),
+
           Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
-                  'Hot Summer Sale',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'New Arrivals',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        "Summer' 25 Collections",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black.withOpacity(0.7),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Special Offers',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey,
-                  ),
-                ),
-                const SizedBox(height: 12),
+
+                // View all বাটন
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.pink,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                  ),
                   onPressed: () {},
-                  child: const Text(
-                    'View all',
-                    style: TextStyle(color: Colors.white),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFFF3B5C), // ছবির মতো পিঙ্কিশ রেড কালার
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'View all',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(width: 8),
+                      Icon(Icons.arrow_forward, size: 18),
+                    ],
                   ),
                 ),
               ],

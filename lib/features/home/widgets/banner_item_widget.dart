@@ -14,7 +14,7 @@ class BannerItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Container(
         width: double.infinity,
         height: MediaQuery.of(context).size.height,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ideated_ecom/core/constant/asset_paths.dart';
 
 class SponsoredWidget extends StatelessWidget {
   const SponsoredWidget({super.key});
@@ -6,46 +7,58 @@ class SponsoredWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
-        color: Colors.grey[200],
-        borderRadius: BorderRadius.circular(8),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: double.infinity,
-            height: 150,
-            decoration: BoxDecoration(
-              color: Colors.brown[200],
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(8),
-                topRight: Radius.circular(8),
+          const Padding(
+            padding: EdgeInsets.all(5),
+            child: Text(
+              'Sponsored',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
               ),
             ),
-            child: const Center(
-              child: Icon(Icons.shopping_bag, size: 60),
-            ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Sponsored',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+          Column(
+            children: [
+              ClipRRect(
+                child: Image.asset(
+                  AssetPaths.Sponserd,
+                  width: double.infinity,
+
+                  fit: BoxFit.cover,
                 ),
-                const SizedBox(height: 8),
-                const Text(
-                  'UP TO 50% OFF',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              ),
+              const SizedBox(height: 12),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(
+                      'Up to 50% off',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: 18,
+                    color: Colors.black.withOpacity(0.8),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),

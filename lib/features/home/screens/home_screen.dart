@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ideated_ecom/features/home/widgets/All_Featured_Widget.dart';
 import 'package:ideated_ecom/features/home/widgets/Bottom_Navigation_Widget.dart';
 import 'package:ideated_ecom/features/home/widgets/Deal_of_the_Day_Widget.dart';
+import 'package:ideated_ecom/features/home/widgets/Flat_And_Heel_Banner_widget.dart';
 import 'package:ideated_ecom/features/home/widgets/Hot_Sale_Widget.dart';
-import 'package:ideated_ecom/features/home/widgets/New_Arrivals_Widget.dart';
 import 'package:ideated_ecom/features/home/widgets/Product_Grid_Widget.dart';
 import 'package:ideated_ecom/features/home/widgets/Search_Bar_Widget.dart';
 import 'package:ideated_ecom/features/home/widgets/Special_Offer_Widget.dart';
@@ -51,12 +51,12 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 24),
             const SpecialOffersWidget(),
             const SizedBox(height: 24),
+             FlatAndHeelsBanner(),
+            const SizedBox(height: 24),
             const TrendingProductsWidget(),
             const SizedBox(height: 24),
             const HotSaleWidget(),
-            const SizedBox(height: 24),
-            const NewArrivalsWidget(),
-            const SizedBox(height: 24),
+                    const SizedBox(height: 24),
             const SponsoredWidget(),
             const SizedBox(height: 16),
           ],

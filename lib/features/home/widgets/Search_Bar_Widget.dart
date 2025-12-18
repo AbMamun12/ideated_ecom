@@ -6,7 +6,7 @@ class SearchBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(8),
       child: TextField(
         decoration: InputDecoration(
           hintText: 'Search any Product...',

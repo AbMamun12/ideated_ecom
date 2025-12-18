@@ -20,10 +20,18 @@ class CategoryWidget extends StatelessWidget {
     ];
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12,),
-      child: SizedBox(
-        height: 95,
+      padding: const EdgeInsets.symmetric(horizontal: 8,),
+
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.white,
+
+        ),
+
+        height: 80,
         child: ListView.builder(
+          padding: const EdgeInsets.all(4),
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (context, index) {

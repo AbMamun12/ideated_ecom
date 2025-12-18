@@ -2,63 +2,77 @@ import 'package:flutter/material.dart';
 
 class TrendingProductItemWidget extends StatelessWidget {
   final String name;
+  final String image;
+  final String currentPrice;
+  final String oldPrice;
+  final String discount;
 
-  const TrendingProductItemWidget({super.key, required this.name});
+  const TrendingProductItemWidget({
+    super.key,
+    required this.name,
+    required this.image,
+    required this.currentPrice,
+    required this.oldPrice,
+    required this.discount,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 140,
-      margin: const EdgeInsets.only(right: 12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            blurRadius: 4,
-          ),
-        ],
-      ),
+      width: 170,
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(8),
-                  topRight: Radius.circular(8),
-                ),
-              ),
-              child: const Icon(Icons.image),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(
+              image,
+              height: 150,
+              width: 170,
+              fit: BoxFit.cover,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  name,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(height: 4),
-                const Text(
-                  '₹2500',
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 4),
-                const Text(
-                  '70% off',
-                  style: TextStyle(fontSize: 10, color: Colors.red),
-                ),
-              ],
+          const SizedBox(height: 8),
+          Text(
+            name,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: Colors.black87,
             ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            'ট$currentPrice',
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+          Row(
+            children: [
+              Text(
+                'ট$oldPrice',
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Colors.grey,
+                  decoration: TextDecoration.lineThrough,
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                discount,
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Colors.orangeAccent,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
           ),
         ],
       ),

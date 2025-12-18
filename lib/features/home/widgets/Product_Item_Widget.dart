@@ -32,6 +32,7 @@ class ProductItemWidget extends StatelessWidget {
                 ),
                 image: DecorationImage(
                   image: AssetImage(product['image']),
+
                   fit: BoxFit.cover,
                 ),
               ),

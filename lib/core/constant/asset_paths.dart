@@ -19,5 +19,11 @@ static const String fashion = 'assets/images/home/fashion.png';
 static const String bannerCarousel = 'assets/images/home/bannerCarousel.png';
 static const String shoes = 'assets/images/home/shoes.png';
 static const String offer = 'assets/images/home/offer.png';
+static const String FlatAndHeelsBanner = 'assets/images/home/flattAndHeel.png';
+static const String watch = 'assets/images/home/watch.png';
+static const String shoe = 'assets/images/home/shoe.png';
+static const String whatSummerSell = 'assets/images/home/what summer sell.png';
+static const String Sponserd = 'assets/images/home/sponserd.png';
+
 
 }
