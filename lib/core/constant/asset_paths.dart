@@ -17,5 +17,7 @@ static const String kids = 'assets/images/home/kids.png';
 
 static const String fashion = 'assets/images/home/fashion.png';
 static const String bannerCarousel = 'assets/images/home/bannerCarousel.png';
+static const String shoes = 'assets/images/home/shoes.png';
+static const String offer = 'assets/images/home/offer.png';
 
 }

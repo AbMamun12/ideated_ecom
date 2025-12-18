@@ -26,13 +26,15 @@ class ProductItemWidget extends StatelessWidget {
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.grey[200],
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(8),
                 ),
+                image: DecorationImage(
+                  image: AssetImage(product['image']),
+                  fit: BoxFit.cover,
+                ),
               ),
-              child: const Icon(Icons.image, size: 50),
             ),
           ),
           Padding(

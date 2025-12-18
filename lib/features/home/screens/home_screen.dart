@@ -26,10 +26,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
+      backgroundColor: Colors.grey[100],
       appBar: const AppBarWidget(),
       body: SingleChildScrollView(
+
+
         child: Column(
+
           children: [
             const SearchBarWidget(),
             const AllFeaturedWidget(),
@@ -44,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 16),
             const DealOfTheDayWidget(),
             const SizedBox(height: 16),
-            const ProductGridWidget(title: 'Deal of the Day'),
+            const HorizontalProductList(title: 'Deal of the Day'),
             const SizedBox(height: 24),
             const SpecialOffersWidget(),
             const SizedBox(height: 24),

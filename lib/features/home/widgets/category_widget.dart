@@ -20,7 +20,7 @@ class CategoryWidget extends StatelessWidget {
     ];
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, ),
+      padding: const EdgeInsets.symmetric(horizontal: 12,),
       child: SizedBox(
         height: 95,
         child: ListView.builder(
