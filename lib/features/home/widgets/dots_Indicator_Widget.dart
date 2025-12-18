@@ -17,7 +17,7 @@ class DotsIndicatorWidget extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 4),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: index == currentIndex ? Colors.pink : Colors.grey[300],
+            color: index == currentIndex ? Colors.pink.shade200 : Colors.grey[300],
           ),
         ),
       ),

@@ -42,12 +42,14 @@ class _BannerCarouselWidgetState extends State<BannerCarouselWidget> {
             onPageChanged: widget.onPageChanged,
             children: [
               BannerItemWidget(
-                bgColor: Colors.pink,
                 discount: '50-40% OFF',
                 description: 'Now in products\nAll colors',
               ),
               BannerItemWidget(
-                bgColor: Colors.orange,
+                discount: '30-40% OFF',
+                description: 'Summer\nCollection',
+              ),
+              BannerItemWidget(
                 discount: '30-40% OFF',
                 description: 'Summer\nCollection',
               ),
